@@ -1,0 +1,11 @@
+# os
+.DS_Store
+
+# typescript
+*.tsbuildinfo
+
+# node
+node_modules/
+
+# build
+dist/

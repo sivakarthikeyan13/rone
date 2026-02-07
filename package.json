@@ -11,7 +11,6 @@
   ],
   "main": "index.ts",
   "scripts": {
-    "build": "cd packages/hooks && npm run build",
     "type-check": "tsc --noEmit",
     "test": "echo \"Running tests...\" && exit 0",
     "lint": "eslint . --ext .ts,.tsx"

@@ -1,0 +1,32 @@
+{
+  "name": "@rone/hooks",
+  "version": "0.1.0-rc.0",
+  "description": "Collection of usefull React hooks",
+  "lisense": "MIT",
+  "author": "Sivakarthikeyan",
+  "keywords": ["react", "hooks", "custom-hooks", "react-hooks"],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivakarthikeyan13/rone.git"
+  },
+  "homepage": "https://github.com/sivakarthikeyan13/rone",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc && vite build",
+    "release": "release-it"
+  }
+}
