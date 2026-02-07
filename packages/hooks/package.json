@@ -4,7 +4,12 @@
   "description": "Collection of usefull React hooks",
   "lisense": "MIT",
   "author": "Sivakarthikeyan",
-  "keywords": ["react", "hooks", "custom-hooks", "react-hooks"],
+  "keywords": [
+    "react",
+    "hooks",
+    "custom-hooks",
+    "react-hooks"
+  ],
   "sideEffects": false,
   "repository": {
     "type": "git",
