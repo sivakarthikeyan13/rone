@@ -15,16 +15,14 @@
     "type-check": "tsc --noEmit",
     "test": "echo \"Running tests...\" && exit 0",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
-    "prepare": "husky",
-    "release": "release-it"
+    "prepare": "husky"
   },
   "author": "Sivakarthikeyan",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^20.3.1",
     "@commitlint/config-conventional": "^20.3.1",
-    "@release-it/bumper": "^7.0.5",
-    "@release-it/conventional-changelog": "^10.0.4",
     "@types/node": "^22.0.0",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
@@ -53,43 +51,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "release-it": {
-    "git": {
-      "requireCleanWorkingDir": true,
-      "requireUpstream": true,
-      "requireBranch": "main",
-      "commit": true,
-      "commitMessage": "chore(release): v${version}",
-      "commitArgs": "--no-verify",
-      "tag": true,
-      "tagName": "v${version}",
-      "tagAnnotation": "Release v${version}",
-      "push": true
-    },
-    "github": {
-      "release": true
-    },
-    "npm": {
-      "publish": false
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": {
-          "name": "angular"
-        },
-        "infile": "CHANGELOG.md",
-        "header": "# Changelog"
-      },
-      "@release-it/bumper": {
-        "out": "packages/**/package.json"
-      }
-    },
-    "hooks": {
-      "after:@release-it/conventional-changelog:bump": "git add CHANGELOG.md",
-      "before:npm:release": "npm run build",
-      "tagName": "v${version}",
-      "after:release": "echo 🎉 Successfully released ${name} v${version}"
-    }
   }
 }
