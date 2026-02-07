@@ -16,7 +16,7 @@
     "test": "echo \"Running tests...\" && exit 0",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
     "prepare": "husky",
-    "release": "release-it"
+    "release": "npm run release --workspaces && release-it --no-increment"
   },
   "author": "Sivakarthikeyan",
   "license": "MIT",
@@ -56,7 +56,7 @@
   },
   "release-it": {
     "git": {
-      "requireCleanWorkingDir": true,
+      "requireCleanWorkingDir": false,
       "requireUpstream": true,
       "requireBranch": "main",
       "commit": true,
@@ -80,9 +80,6 @@
         },
         "infile": "CHANGELOG.md",
         "header": "# Changelog"
-      },
-      "@release-it/bumper": {
-        "out": "packages/**/package.json"
       }
     },
     "hooks": {

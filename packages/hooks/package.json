@@ -42,9 +42,12 @@
   },
   "release-it": {
     "git": false,
-    "npm": {
-      "publish": true,
-      "skipChecks": true
+    "npm": false,
+    "plugins": {
+      "@release-it/bumper": {
+        "file": "package.json",
+        "out": "package.json"
+      }
     },
     "hooks": {
       "after:release": "echo echo 🎉 Successfully published ${name} v${version}"
