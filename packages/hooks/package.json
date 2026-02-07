@@ -1,6 +1,6 @@
 {
   "name": "@rone/hooks",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Collection of usefull React hooks",
   "lisense": "MIT",
   "author": "Sivakarthikeyan",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "build": "rimraf ./dist && tsc && vite build",
-    "release": "release-it"
+    "release": "release-it --no-increment"
   },
   "devDependencies": {
     "@types/react": "^19.2.13",
@@ -43,11 +43,6 @@
   "release-it": {
     "git": false,
     "npm": false,
-    "plugins": {
-      "@release-it/bumper": {
-        "out": "package.json"
-      }
-    },
     "hooks": {
       "after:release": "echo echo 🎉 Successfully published ${name} v${version}"
     }

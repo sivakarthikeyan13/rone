@@ -1,6 +1,6 @@
 {
   "name": "rone-project",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "description": "Rone Project Monorepo",
   "private": true,
   "engines": {
@@ -16,7 +16,7 @@
     "test": "echo \"Running tests...\" && exit 0",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
     "prepare": "husky",
-    "release": "npm run release --workspaces && release-it --no-increment"
+    "release": "release-it && npm run release --workspaces"
   },
   "author": "Sivakarthikeyan",
   "license": "MIT",
@@ -70,25 +70,26 @@
     "github": {
       "release": true
     },
-    "npm": {
-      "publish": false
-    },
+    "npm": false,
     "plugins": {
       "@release-it/conventional-changelog": {
         "preset": {
           "name": "angular"
         },
         "infile": "CHANGELOG.md",
-        "header": "# Changelog"
+        "header": "# Changelog",
+        "ignoreRecommendedBump": true
       },
       "@release-it/bumper": {
-        "in": "packages/hooks/package.json",
-        "out": "package.json"
+        "in": "package.json",
+        "out": [
+          "package.json",
+          "packages/**/package.json"
+        ]
       }
     },
     "hooks": {
-      "before:init": "npm i --package-lock-only",
-      "after:@release-it/conventional-changelog:bump": "git add CHANGELOG.md",
+      "after:@release-it/bumper:bump": "npm i --package-lock-only && git add CHANGELOG.md",
       "before:npm:release": "npm run build",
       "tagName": "v${version}",
       "after:release": "echo 🎉 Successfully released ${name} v${version}"
