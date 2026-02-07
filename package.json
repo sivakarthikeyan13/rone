@@ -83,6 +83,7 @@
       }
     },
     "hooks": {
+      "before:init": "npm i --package-lock-only",
       "after:@release-it/conventional-changelog:bump": "git add CHANGELOG.md",
       "before:npm:release": "npm run build",
       "tagName": "v${version}",
