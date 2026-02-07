@@ -1,0 +1,12 @@
+# Run lint-staged for linting and formatting
+echo "Running lint-staged..."
+npx lint-staged
+
+# Check TypeScript error
+echo "Checking TypeScript errors..."
+npm run type-check
+
+# Run unit tests
+echo "Running unit tests..."
+npm test
+

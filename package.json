@@ -13,7 +13,8 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "test": "echo \"Running tests...\" && exit 0",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "prepare": "husky"
   },
   "author": "Sivakarthikeyan",
   "license": "MIT",
