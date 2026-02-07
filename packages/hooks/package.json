@@ -1,6 +1,6 @@
 {
   "name": "@rone/hooks",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0-alpha.1",
   "description": "Collection of usefull React hooks",
   "lisense": "MIT",
   "author": "Sivakarthikeyan",
@@ -39,5 +39,15 @@
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
+  },
+  "release-it": {
+    "git": false,
+    "npm": {
+      "publish": true,
+      "skipChecks": true
+    },
+    "hooks": {
+      "after:release": "echo echo 🎉 Successfully published ${name} v${version}"
+    }
   }
 }
