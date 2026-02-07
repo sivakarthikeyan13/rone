@@ -1,6 +1,6 @@
 {
   "name": "rone-project",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha.3",
   "description": "Rone Project Monorepo",
   "private": true,
   "engines": {
@@ -80,6 +80,10 @@
         },
         "infile": "CHANGELOG.md",
         "header": "# Changelog"
+      },
+      "@release-it/bumper": {
+        "in": "packages/hooks/package.json",
+        "out": "package.json"
       }
     },
     "hooks": {
