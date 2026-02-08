@@ -1,5 +1,7 @@
 # Changelog
 
+# [0.1.0-alpha.5](https://github.com/sivakarthikeyan13/rone/compare/v0.1.0-alpha.3...v0.1.0-alpha.5) (2026-02-08)
+
 # [0.1.0-alpha.4](https://github.com/sivakarthikeyan13/rone/compare/v0.1.0-alpha.3...v0.1.0-alpha.4) (2026-02-07)
 
 # [0.1.0-alpha.3](https://github.com/sivakarthikeyan13/rone/compare/v1.0.0...v1.0.0) (2026-02-07)
