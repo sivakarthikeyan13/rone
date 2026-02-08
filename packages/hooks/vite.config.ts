@@ -9,8 +9,7 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: resolve(__dirname, "./src/index.ts"),
-      name,
-      formats: ["es", "cjs"]
+      name
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies), "react/jsx-runtime"],
