@@ -35,6 +35,11 @@ const subscribe = (callback: () => void): (() => void) => {
   };
 };
 
+/**
+ * Returns the current screen orientation angle and type, updating on orientation change.
+ * @example
+ * const { angle, type } = useOrientation(); // { angle: 0, type: 'portrait-primary' }
+ */
 export function useOrientation(): OrientationState {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

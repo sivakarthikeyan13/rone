@@ -19,6 +19,12 @@ export type UseResizeObserverReturnValue<T extends HTMLElement = any> = [
   ObserverRect
 ];
 
+/**
+ * Observes an element's border-box size changes via the ResizeObserver API.
+ * @example
+ * const [ref, rect] = useResizeObserver<HTMLDivElement>();
+ * return <div ref={ref}>width: {rect.width}</div>;
+ */
 export function useResizeObserver<T extends HTMLElement = any>(
   options?: ResizeObserverOptions
 ): UseResizeObserverReturnValue<T> {

@@ -1,5 +1,10 @@
 import { useEffect, useEffectEvent } from "react";
 
+/**
+ * Attaches a typed event listener to the window object.
+ * @example
+ * useWindowEvent('resize', () => recalculate());
+ */
 export function useWindowEvent<K extends string>(
   type: K,
   listener: K extends keyof WindowEventMap

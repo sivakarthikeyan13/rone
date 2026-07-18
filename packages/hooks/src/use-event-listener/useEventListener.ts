@@ -1,5 +1,11 @@
 import { useCallback, useRef, useEffect, useEffectEvent } from "react";
 
+/**
+ * Attaches a typed event listener to a DOM element via a ref callback.
+ * @example
+ * const ref = useEventListener('click', (e) => console.log(e.clientX, e.clientY));
+ * return <button ref={ref}>Click me</button>;
+ */
 export function useEventListener<K extends keyof HTMLElementEventMap, T extends HTMLElement>(
   type: K,
   listener: (this: T, ev: HTMLElementEventMap[K]) => void,

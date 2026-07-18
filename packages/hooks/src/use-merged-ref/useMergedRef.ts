@@ -38,6 +38,12 @@ export function mergeRefs<T>(...refs: PossibleRef<T>[]): RefCallback<T> {
   };
 }
 
+/**
+ * Merges multiple React refs (callback refs or ref objects) into a single ref callback.
+ * @example
+ * const ref = useMergedRef(localRef, forwardedRef);
+ * return <div ref={ref} />;
+ */
 export function useMergedRef<T>(...refs: PossibleRef<T>[]): RefCallback<T> {
   return useCallback(mergeRefs(...refs), refs);
 }

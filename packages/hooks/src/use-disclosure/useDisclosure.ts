@@ -13,6 +13,11 @@ export interface UseDisclosureHandlers {
 
 export type UseDisclosureReturnValue = [boolean, UseDisclosureHandlers];
 
+/**
+ * Manages open/closed state with open, close, and toggle handlers.
+ * @example
+ * const [opened, { open, close, toggle }] = useDisclosure(false);
+ */
 export function useDisclosure(
   initialState = false,
   options: UseDisclosureOptions = {}

@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useRef } from "react";
 
+/**
+ * Returns a debounced version of the provided callback that delays invoking it until after the wait.
+ * @example
+ * const search = useDebouncedCallback((query: string) => fetchResults(query), 300);
+ */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function useDebouncedCallback<T extends (...args: any[]) => any>(
   callback: T,

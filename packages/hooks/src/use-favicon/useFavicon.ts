@@ -8,6 +8,11 @@ const MIME_TYPES: Record<string, string> = {
   gif: "image/gif"
 };
 
+/**
+ * Dynamically sets the page favicon to the provided URL.
+ * @example
+ * useFavicon('/icons/active.png');
+ */
 export function useFavicon(url: string) {
   const link = useRef<HTMLLinkElement>(null);
 

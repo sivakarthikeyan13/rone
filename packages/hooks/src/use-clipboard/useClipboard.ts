@@ -16,6 +16,11 @@ export type UseClipboardReturnValue = {
   copied: boolean;
 };
 
+/**
+ * Copies a value to the clipboard with a timed reset of the copied state.
+ * @example
+ * const { copy, copied, reset, error } = useClipboard({ timeout: 2000 });
+ */
 export function useClipboard(
   options: UseClipboardOptions = { timeout: 2000 }
 ): UseClipboardReturnValue {

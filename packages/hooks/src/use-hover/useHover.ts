@@ -5,6 +5,12 @@ export interface UseHoverReturnValue<T extends HTMLElement = HTMLElement> {
   ref: React.RefCallback<T | null>;
 }
 
+/**
+ * Tracks whether an element is currently hovered via a ref callback.
+ * @example
+ * const { hovered, ref } = useHover<HTMLButtonElement>();
+ * return <button ref={ref}>{hovered ? 'Hovered' : 'Hover me'}</button>;
+ */
 export function useHover<T extends HTMLElement = HTMLElement>(): UseHoverReturnValue<T> {
   const [hovered, setHovered] = useState(false);
   const prevNode = useRef<T | null>(null);
