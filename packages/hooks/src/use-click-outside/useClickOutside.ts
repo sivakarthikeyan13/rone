@@ -4,6 +4,12 @@ type EventType = MouseEvent | TouchEvent;
 
 const DEFAULT_EVENTS = ["mousedown", "touchstart"];
 
+/**
+ * Triggers a callback when a click or touch event occurs outside the referenced element.
+ * @example
+ * const ref = useClickOutside<HTMLDivElement>(() => setOpen(false));
+ * return <div ref={ref}>dropdown</div>;
+ */
 export function useClickOutside<T extends HTMLElement>(
   callback: (event: EventType) => void,
   events?: string[] | null,

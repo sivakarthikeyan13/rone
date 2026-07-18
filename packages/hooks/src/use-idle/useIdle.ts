@@ -10,6 +10,11 @@ const DEFAULT_OPTIONS: Required<UseIdleOptions> = {
   initialState: true
 };
 
+/**
+ * Detects user inactivity after the specified timeout in milliseconds.
+ * @example
+ * const idle = useIdle(30_000); // true after 30 s of inactivity
+ */
 export function useIdle(timeout: number, options?: UseIdleOptions) {
   const { events, initialState } = { ...DEFAULT_OPTIONS, ...options };
   const [idle, setIdle] = useState(initialState);

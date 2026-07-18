@@ -12,6 +12,11 @@ export interface UseUncontrolledInput<T> {
 
 const noop = () => {};
 
+/**
+ * Manages a value that can operate as either controlled or uncontrolled, bridging both patterns.
+ * @example
+ * const [value, handleChange, controlled] = useUncontrolled({ value: propValue, initialValue: '', onChange });
+ */
 export function useUncontrolled<T>({
   value,
   initialValue,

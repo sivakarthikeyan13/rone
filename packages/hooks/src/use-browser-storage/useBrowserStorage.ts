@@ -74,6 +74,11 @@ function readValuesFromStorage<T>(
   return defaultValue as T;
 }
 
+/**
+ * Persists and syncs a value in localStorage or sessionStorage with JSON serialization.
+ * @example
+ * const [token, setToken, removeToken] = useBrowserStorage({ key: 'auth-token', defaultValue: '' });
+ */
 function useBrowserStorage<T>({
   type = "localStorage",
   key,

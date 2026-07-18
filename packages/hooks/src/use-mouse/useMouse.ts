@@ -10,6 +10,12 @@ export interface UseMouseReturnValue<T extends HTMLElement = HTMLElement> {
   y: number;
 }
 
+/**
+ * Tracks the mouse cursor position relative to a target element or the viewport.
+ * @example
+ * const { ref, x, y } = useMouse<HTMLDivElement>();
+ * return <div ref={ref}>Mouse at {x}, {y}</div>;
+ */
 export function useMouse<T extends HTMLElement = HTMLElement>(
   options: UseMouseOptions = { resetOnExit: false }
 ): UseMouseReturnValue<T> {

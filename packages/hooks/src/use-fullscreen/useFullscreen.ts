@@ -1,6 +1,12 @@
 import { useCallback, useRef, useSyncExternalStore } from "react";
 import { fullscreenStore } from "./fullscreenStore";
 
+/**
+ * Enters and exits fullscreen mode for a target element or the document.
+ * @example
+ * const { ref, toggle, fullscreen } = useFullscreen<HTMLVideoElement>();
+ * return <video ref={ref} onClick={toggle} />;
+ */
 export function useFullscreen<T extends HTMLElement = HTMLElement>() {
   const isGlobalFullscreen = useSyncExternalStore(
     fullscreenStore.subscribe,

@@ -65,7 +65,11 @@ const defaultOptions: UseFileDialogOptions = {
   accept: "*"
 };
 
-// TODO: improve on this
+/**
+ * Opens a native file picker dialog and returns the selected files.
+ * @example
+ * const { open, files } = useFileDialog({ accept: 'image/*', multiple: false });
+ */
 export function useFileDialog(input: UseFileDialogOptions) {
   const options: UseFileDialogOptions = { ...defaultOptions, ...input };
   const [files, setFiles] = useState<FileList | null>(getInitialFilesList(options.initialFiles));
