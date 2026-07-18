@@ -12,6 +12,7 @@
   "main": "index.ts",
   "scripts": {
     "build": "npm run build --workspaces",
+    "docs": "tsx scripts/gen-docs.ts",
     "type-check": "tsc --noEmit",
     "test": "echo \"Running tests...\" && exit 0",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore",
@@ -35,6 +36,7 @@
     "prettier": "^3.7.4",
     "release-it": "^19.2.3",
     "rimraf": "^6.1.2",
+    "ts-morph": "^28.0.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^7.18.0",
     "vite": "^7.3.1",
