@@ -2,6 +2,10 @@
 echo "Running lint-staged..."
 npx lint-staged
 
+# Check documentation is up-to-date
+echo "Checking documentation drift..."
+npm run docs -- --check
+
 # Check TypeScript error
 echo "Checking TypeScript errors..."
 npm run type-check
