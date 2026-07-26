@@ -1,6 +1,6 @@
 {
   "name": "@ronekit/hooks",
-  "version": "0.1.0-alpha.6",
+  "version": "0.1.0",
   "description": "Collection of useful React hooks",
   "lisense": "MIT",
   "author": "Sivakarthikeyan",
