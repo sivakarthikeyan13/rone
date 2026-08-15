@@ -1,6 +1,6 @@
 {
   "name": "rone-project",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rone Project Monorepo",
   "private": true,
   "engines": {
